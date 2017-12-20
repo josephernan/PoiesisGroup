@@ -1,24 +1,903 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1VX-vZ-7ga">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Poiesis Group-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afy-c6-736">
+                                <rect key="frame" x="112" y="85" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5Q-aQ-q4G">
+                                <rect key="frame" x="55" y="295" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8G-6g-NxK">
+                                <rect key="frame" x="55" y="345" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soi-QK-vN9" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="55" y="400" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LogIn"/>
+                                <connections>
+                                    <action selector="doLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xd6-Px-72i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW7-rO-Cu6" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="55" y="580" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ContactUs"/>
+                                <connections>
+                                    <action selector="goContactUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCw-oa-cXg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIW-IF-PLp" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="200" y="580" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AboutUs"/>
+                                <connections>
+                                    <action selector="goAboutUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AD9-Gy-vz0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r66-6T-wQn" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="200" y="400" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <action selector="goSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEA-nD-4oL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAc-Uj-m73" customClass="GIDSignInButton">
+                                <rect key="frame" x="55" y="460" width="265" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M2-M5-z6a" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="55" y="520" width="265" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.13175785438247578" green="0.72620486131666862" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Facebook LogIn">
+                                    <color key="titleColor" red="0.99732562793662261" green="0.99136564043270159" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BNe-fG-dvQ">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Poiesis Group" id="ydQ-Sl-ucX"/>
+                    <connections>
+                        <outlet property="aboutBtn" destination="OIW-IF-PLp" id="5bs-he-xy4"/>
+                        <outlet property="contactBtn" destination="IW7-rO-Cu6" id="Uv2-q6-mee"/>
+                        <outlet property="fbloginBtn" destination="0M2-M5-z6a" id="tmw-nL-9Rf"/>
+                        <outlet property="loading" destination="BNe-fG-dvQ" id="2sm-EA-Cl1"/>
+                        <outlet property="loginBtn" destination="soi-QK-vN9" id="NSu-Ul-ODJ"/>
+                        <outlet property="logoImg" destination="afy-c6-736" id="iqS-Ae-Qcp"/>
+                        <outlet property="mailText" destination="t5Q-aQ-q4G" id="7Gk-8I-Ls1"/>
+                        <outlet property="passText" destination="W8G-6g-NxK" id="7pI-MA-jr4"/>
+                        <outlet property="signInButton" destination="kAc-Uj-m73" id="8PM-Ml-yvq"/>
+                        <outlet property="signupBtn" destination="r66-6T-wQn" id="yk8-KO-aIF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="107.49625187406298"/>
+        </scene>
+        <!--Sign Up-->
+        <scene sceneID="ddK-QC-CVa">
+            <objects>
+                <viewController storyboardIdentifier="SignUpVC" id="fiU-G2-cBk" customClass="UserSignUpViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w0E-yb-bg5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUv-CI-fmh">
+                                <rect key="frame" x="55" y="135" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7Z-7v-sb8" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="55" y="554" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <action selector="goSignUpOk:" destination="fiU-G2-cBk" eventType="touchUpInside" id="1p5-RD-H7Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lu2-0V-tAP" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="200" y="554" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="goCancel:" destination="fiU-G2-cBk" eventType="touchUpInside" id="nqc-Z4-ONu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgG-7a-Vga">
+                                <rect key="frame" x="87" y="215" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRH-e7-vvb">
+                                <rect key="frame" x="87" y="295" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkm-BP-ORd">
+                                <rect key="frame" x="87" y="375" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oma-CS-Gu2">
+                                <rect key="frame" x="87" y="465" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4lW-TU-bMk">
+                                <rect key="frame" x="210" y="135" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="yig-ss-2gN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="X1d-pi-wBb"/>
+                    <connections>
+                        <outlet property="cancelSignBtn" destination="lu2-0V-tAP" id="FRn-Qz-TLd"/>
+                        <outlet property="confirmPassText" destination="Oma-CS-Gu2" id="S4F-Dh-ZjJ"/>
+                        <outlet property="emailText" destination="hgG-7a-Vga" id="TVR-oD-JJG"/>
+                        <outlet property="firstNameText" destination="rUv-CI-fmh" id="QLR-0B-2mZ"/>
+                        <outlet property="lastNameText" destination="4lW-TU-bMk" id="Gg9-CP-m9N"/>
+                        <outlet property="okSignBtn" destination="D7Z-7v-sb8" id="8gE-hM-fgs"/>
+                        <outlet property="passwordText" destination="Zkm-BP-ORd" id="GbA-Sm-sDo"/>
+                        <outlet property="phoneText" destination="DRH-e7-vvb" id="D1d-ZJ-eZK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKn-Xy-HDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5999999999999" y="106.59670164917542"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XBd-5M-prS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1VX-vZ-7ga" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5yu-z8-V1x">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wrf-8O-rne"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asS-Wf-V0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="107"/>
+        </scene>
+        <!--About Us-->
+        <scene sceneID="y9B-ra-933">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsVC" id="GTa-Gy-iMT" customClass="AboutUsViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mWL-Qr-TuK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-so-8fD">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="y2u-Ay-NdZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="M6S-b2-fb8">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Jp4-la-AVa">
+                            <connections>
+                                <action selector="back:" destination="GTa-Gy-iMT" id="6h1-c7-9rL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="display" destination="Nyc-so-8fD" id="JYi-7m-C5t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10K-mC-uva" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5999999999999" y="841.52923538230891"/>
+        </scene>
+        <!--Contact Us-->
+        <scene sceneID="DJL-gt-BoN">
+            <objects>
+                <viewController storyboardIdentifier="ContactUsVC" id="fsd-CU-z4N" customClass="ContactUsViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CgV-vg-baz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7X-Dw-1UG" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="61" y="520" width="252" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Phone Call"/>
+                                <connections>
+                                    <action selector="PhoneCall:" destination="fsd-CU-z4N" eventType="touchUpInside" id="qc2-h9-Dwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzm-05-5B1" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="61" y="410" width="252" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Email"/>
+                                <connections>
+                                    <action selector="SendEmail:" destination="fsd-CU-z4N" eventType="touchUpInside" id="XBF-25-abU"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-dm-Ccv">
+                                <rect key="frame" x="112" y="93" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FId-Sv-ETC" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="61" y="300" width="252" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chat"/>
+                                <connections>
+                                    <action selector="Chat:" destination="fsd-CU-z4N" eventType="touchUpInside" id="Dp7-zH-IV0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="u7V-Pe-GT3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact Us" id="PAL-w8-geU">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="0Tr-Ji-nBy">
+                            <connections>
+                                <action selector="back:" destination="fsd-CU-z4N" id="pPq-48-U9l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Photo" destination="zEi-dm-Ccv" id="W6q-ZG-Bf5"/>
+                        <outlet property="chatBtn" destination="FId-Sv-ETC" id="XqF-h7-cfx"/>
+                        <outlet property="emailBtn" destination="Wzm-05-5B1" id="caT-mS-dpZ"/>
+                        <outlet property="phoneCallBtn" destination="v7X-Dw-1UG" id="17V-e4-4Qk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1H-86-1sk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="841.52923538230891"/>
+        </scene>
+        <!--Doctor Detail-->
+        <scene sceneID="Gds-lS-54y">
+            <objects>
+                <viewController storyboardIdentifier="DoctorDetail" id="Gfd-b1-91J" customClass="DoctorDetialViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Coa-3E-Y9m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdt-ai-xys">
+                                <rect key="frame" x="10" y="70" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-ZB-x77" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="120" y="615" width="75" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Chat">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Chat:" destination="Gfd-b1-91J" eventType="touchUpInside" id="sn9-mh-Hla"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biv-Fb-IOz" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="200" y="615" width="75" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Email">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="SendEmail:" destination="Gfd-b1-91J" eventType="touchUpInside" id="8nU-ji-NXF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-ip-org" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="280" y="615" width="85" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Phone call">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="PhoneCall:" destination="Gfd-b1-91J" eventType="touchUpInside" id="vzh-j2-Adx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yUl-ex-bvr" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="10" y="615" width="105" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal">
+                                    <string key="title">    Make an 
+appointment</string>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goMakeApp:" destination="Gfd-b1-91J" eventType="touchUpInside" id="jhd-f7-WQa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kZ-34-32y">
+                                <rect key="frame" x="103" y="82" width="262" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODL-Hr-Jra">
+                                <rect key="frame" x="10" y="163" width="355" height="444"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ida-Ig-6HJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Doctor Detail" id="JS3-Gv-COK">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="0Od-V1-Rbu">
+                            <connections>
+                                <action selector="back:" destination="Gfd-b1-91J" id="M2M-GO-Kvw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chatBtn" destination="T3L-ZB-x77" id="EZm-De-MRK"/>
+                        <outlet property="display" destination="ODL-Hr-Jra" id="RET-WO-BdS"/>
+                        <outlet property="doctorName" destination="7kZ-34-32y" id="qSq-Tg-2Vu"/>
+                        <outlet property="doctorPhoto" destination="Rdt-ai-xys" id="ez4-hp-nhN"/>
+                        <outlet property="emailBtn" destination="biv-Fb-IOz" id="DB1-wg-6Zh"/>
+                        <outlet property="makeAppBtn" destination="yUl-ex-bvr" id="ZUF-sa-WXr"/>
+                        <outlet property="phoneCallBtn" destination="kUo-ip-org" id="Abp-aJ-eaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="toz-za-fYN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3692" y="841.52923538230891"/>
+        </scene>
+        <!--Pay For Session-->
+        <scene sceneID="QkA-En-wG9">
+            <objects>
+                <viewController storyboardIdentifier="PayViewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yvQ-zI-Yxe" customClass="PayForSession" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DFr-ih-GjC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EI-Nd-Aqe" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="164" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PayPal"/>
+                                <connections>
+                                    <action selector="goPayPal:" destination="yvQ-zI-Yxe" eventType="touchUpInside" id="kLc-Tu-T7x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ9-MY-HRF" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="270" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Credit Card"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoo-Nx-XFt" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="483" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pay at Clinic"/>
+                                <connections>
+                                    <action selector="payAtClinic:" destination="yvQ-zI-Yxe" eventType="touchUpInside" id="puS-9o-vyJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U1-jB-1Sw" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="380" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Transfer"/>
+                                <connections>
+                                    <action selector="goBankInfo:" destination="yvQ-zI-Yxe" eventType="touchUpInside" id="dNB-yr-eBq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Ydg-T1-3Ub"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pay For Session" id="oUI-Z2-JFq">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Bt4-vd-dBo">
+                            <connections>
+                                <action selector="back:" destination="yvQ-zI-Yxe" id="LgL-tT-jeH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aE9-7V-Yt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4445.6000000000004" y="841.52923538230891"/>
+        </scene>
+        <!--Doctor List-->
+        <scene sceneID="496-UT-71q">
+            <objects>
+                <tableViewController storyboardIdentifier="DoctorListVC" id="WPP-l3-tt6" customClass="DoctorListViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sSf-qT-m1J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="xu6-qe-MjW">
+                            <rect key="frame" x="0.0" y="83" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DoctorListCell" rowHeight="55" id="OuN-Po-3sq" customClass="DoctorListCell" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OuN-Po-3sq" id="m57-Ov-2qk">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="54.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFN-Ue-eVb">
+                                            <rect key="frame" x="10" y="5" width="45" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBQ-dY-fCi">
+                                            <rect key="frame" x="63" y="-7" width="270" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="doctorName" destination="SBQ-dY-fCi" id="MGC-hq-aAl"/>
+                                    <outlet property="doctorPhoto" destination="sFN-Ue-eVb" id="ZQl-bL-8F5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WPP-l3-tt6" id="3Dg-ak-bbo"/>
+                            <outlet property="delegate" destination="WPP-l3-tt6" id="wfk-PN-ecP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Doctor List" id="wzW-Yn-i76">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="smb-t1-IqY">
+                            <connections>
+                                <action selector="back:" destination="WPP-l3-tt6" id="iSE-Zm-G5d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bee-Un-L3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2968.8000000000002" y="841.52923538230891"/>
+        </scene>
+        <!--Main Session-->
+        <scene sceneID="Mxo-dV-V9a">
+            <objects>
+                <viewController storyboardIdentifier="MakeAppVC_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A4p-BN-w0D" customClass="MakeAppVC" customModule="Poiesis_Group" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Py3-50-F1b"/>
+                        <viewControllerLayoutGuide type="bottom" id="uqm-gq-aTb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9dt-CZ-4Bx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysJ-iY-rAh" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="277" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Therapists"/>
+                                <connections>
+                                    <action selector="goDoctorList:" destination="A4p-BN-w0D" eventType="touchUpInside" id="xhC-Zp-8Pd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1c-6j-6uT" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="406" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pay for a session"/>
+                                <connections>
+                                    <action selector="goPayForSession:" destination="A4p-BN-w0D" eventType="touchUpInside" id="3WD-SC-T2i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKP-cc-Lgb" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="148" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Make an appointment"/>
+                                <connections>
+                                    <action selector="MakeAppAct:" destination="A4p-BN-w0D" eventType="touchUpInside" id="gzB-mU-lj1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShP-X9-ZAO" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="535" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Important information"/>
+                                <connections>
+                                    <action selector="goImportantInfo:" destination="A4p-BN-w0D" eventType="touchUpInside" id="68k-Yd-cch"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ITf-Ud-Xmb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Session" id="3NL-8n-Lxs">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="QsP-84-F1D">
+                            <connections>
+                                <action selector="goMain:" destination="A4p-BN-w0D" id="aJA-ZO-B2e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ImportantInformationButton" destination="ShP-X9-ZAO" id="5nf-hW-pzU"/>
+                        <outlet property="MakeAppButton" destination="hKP-cc-Lgb" id="xjb-6c-vP7"/>
+                        <outlet property="PaySessionButton" destination="m1c-6j-6uT" id="R5L-nU-fWM"/>
+                        <outlet property="TherapistsButton" destination="ysJ-iY-rAh" id="E0j-4T-KVL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xh-Ix-lKp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2222" y="106"/>
+        </scene>
+        <!--Select a Service-->
+        <scene sceneID="zZN-c3-IZf">
+            <objects>
+                <viewController storyboardIdentifier="SelectServiceVC_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U9E-hA-7MX" customClass="SelectServiceVC" customModule="Poiesis_Group" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nqt-2d-UBn"/>
+                        <viewControllerLayoutGuide type="bottom" id="pXp-8t-Lzp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SDR-6w-F5I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-rk-4WA" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="112" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Individual Therapy"/>
+                                <connections>
+                                    <action selector="IndividualTherapyAct:" destination="U9E-hA-7MX" eventType="touchUpInside" id="z0H-ce-aN7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykG-bV-5fe" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="204" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pediatric Psychology"/>
+                                <connections>
+                                    <action selector="PediatricPsychologyAct:" destination="U9E-hA-7MX" eventType="touchUpInside" id="QuG-KH-ndt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-os-Peq" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="297" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Adolescents Psychology"/>
+                                <connections>
+                                    <action selector="AdolescentsPsychology:" destination="U9E-hA-7MX" eventType="touchUpInside" id="agQ-Wb-XET"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WK3-AC-0j2" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="389" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Couples Therapy"/>
+                                <connections>
+                                    <action selector="CouplesTherapy:" destination="U9E-hA-7MX" eventType="touchUpInside" id="kOW-LL-sIL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNG-wf-AJ3" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="482" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Family Therapy"/>
+                                <connections>
+                                    <action selector="FamilyTherapy:" destination="U9E-hA-7MX" eventType="touchUpInside" id="NbA-Zv-9bv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcB-aW-HJI" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="50" y="575" width="275" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Coaching"/>
+                                <connections>
+                                    <action selector="Coaching:" destination="U9E-hA-7MX" eventType="touchUpInside" id="bmD-Wp-hye"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Tfj-1G-hbL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select a Service" id="flC-2a-TTL">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="uad-Ll-uls">
+                            <connections>
+                                <action selector="back:" destination="U9E-hA-7MX" id="SOT-vF-ofI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="APButton" destination="iMF-os-Peq" id="PBd-8l-TIM"/>
+                        <outlet property="CButton" destination="DcB-aW-HJI" id="tEI-Xp-6tw"/>
+                        <outlet property="CTButton" destination="WK3-AC-0j2" id="1yx-pg-1s2"/>
+                        <outlet property="FTButton" destination="rNG-wf-AJ3" id="A2d-ki-3Z9"/>
+                        <outlet property="ITButton" destination="2Wi-rk-4WA" id="u6g-1I-2YS"/>
+                        <outlet property="PPButton" destination="ykG-bV-5fe" id="gcF-C1-BdE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ui-y2-P9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2849" y="106"/>
+        </scene>
+        <!--Select a Doctor-->
+        <scene sceneID="DWc-Ue-GE1">
+            <objects>
+                <tableViewController storyboardIdentifier="SelectDoctorTV_ID" title="Select a Doctor" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rFk-sj-aXy" customClass="SelectDoctorTV" customModule="Poiesis_Group" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="RNu-GE-b1w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="JFk-zD-KaO">
+                            <rect key="frame" x="0.0" y="83" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NameCell" rowHeight="55" id="jeD-SP-2uR" customClass="NameCell" customModule="Poiesis_Group">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jeD-SP-2uR" id="Q6R-Gk-wfr">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="54.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1i-Sw-4fs">
+                                            <rect key="frame" x="12" y="7" width="317" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="K1i-Sw-4fs" id="SKH-In-kHC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rFk-sj-aXy" id="E2P-F6-ngy"/>
+                            <outlet property="delegate" destination="rFk-sj-aXy" id="IM5-7y-7PC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select a Doctor" id="tKl-Bh-h5h">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="rzf-e5-5On">
+                            <connections>
+                                <segue destination="m5x-qH-BVF" kind="unwind" unwindAction="unwindToMainWithSegue:" id="cYV-wI-0k9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8t-Pl-NSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="m5x-qH-BVF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3481" y="106"/>
+        </scene>
+        <!--Doctor Detail-->
+        <scene sceneID="b28-oj-HdQ">
+            <objects>
+                <tableViewController storyboardIdentifier="SelectDoctorDetail_ID" title="Doctor Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d6s-XP-3yd" customClass="SelectDoctorDetailTV" customModule="Poiesis_Group" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="17T-M3-jQx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="php-fa-YWU">
+                            <rect key="frame" x="0.0" y="83" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DoctorDetailCell" rowHeight="55" id="3CJ-F6-xOL" customClass="DoctorDetailCell" customModule="Poiesis_Group">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3CJ-F6-xOL" id="jVX-1Q-nNv">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="54.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="205-SC-Z4c">
+                                            <rect key="frame" x="8" y="5" width="45" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoj-PN-Qub">
+                                            <rect key="frame" x="61" y="-7" width="272" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="doctorName" destination="Yoj-PN-Qub" id="fdu-05-yPN"/>
+                                    <outlet property="doctorPhoto" destination="205-SC-Z4c" id="jy0-YW-jdu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="d6s-XP-3yd" id="edv-fT-bzd"/>
+                            <outlet property="delegate" destination="d6s-XP-3yd" id="qQX-ZP-HDF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Doctor Detail" id="YpO-eo-DEv">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="kSv-pm-c0p">
+                            <connections>
+                                <segue destination="vug-RM-r4r" kind="unwind" unwindAction="unwindToMainWithSegue:" id="FZT-Dj-Mlm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnC-d5-HXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vug-RM-r4r" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4144.8000000000002" y="105.69715142428787"/>
+        </scene>
+        <!--Select Date and Time-->
+        <scene sceneID="JVb-Gg-Yco">
+            <objects>
+                <viewController storyboardIdentifier="SelectDateVC_ID" title="Select Date and Time" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Blg-Oh-yK0" customClass="SelectDateVC" customModule="Poiesis_Group" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oWR-Ia-5D3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUX-Ni-jky">
+                                <rect key="frame" x="77" y="228" width="220" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6xk-Rg-TQ3">
+                                <rect key="frame" x="20" y="341" width="335" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="532660068.15842301">
+                                    <!--2017-11-18 01:07:48 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="Blg-Oh-yK0" eventType="valueChanged" id="NaV-ua-H4t"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81b-sg-ZqN" customClass="CustomButton" customModule="Poiesis_Group" customModuleProvider="target">
+                                <rect key="frame" x="57" y="554" width="260" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="SendBtnAction:" destination="Blg-Oh-yK0" eventType="touchUpInside" id="VOT-uL-EA0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8c-oM-emT">
+                                <rect key="frame" x="77" y="114" width="220" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6TH-bU-A74"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Date and Time" id="B0J-iX-pfj">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="gPn-8n-zye">
+                            <connections>
+                                <segue destination="Jwa-b1-hb9" kind="unwind" unwindAction="unwindToMainWithSegue:" id="r7s-W6-AbQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="6xk-Rg-TQ3" id="ne7-hT-Raj"/>
+                        <outlet property="sendButton" destination="81b-sg-ZqN" id="5lM-vK-jgf"/>
+                        <outlet property="timeLabel" destination="uUX-Ni-jky" id="ihA-Qo-EPf"/>
+                        <outlet property="yearLabel" destination="b8c-oM-emT" id="G5Q-un-ip3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTp-l5-00g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Jwa-b1-hb9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4849" y="107"/>
+        </scene>
+        <!--Important Information-->
+        <scene sceneID="04S-kG-MOe">
+            <objects>
+                <viewController storyboardIdentifier="ImportantInfoVC" id="RL7-k1-KWN" customClass="ImportantInfoViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRT-Tu-Wly">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2BH-dE-yiI">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fai-hS-7qm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Important Information" id="0yO-vH-x37">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="lik-nt-KdA">
+                            <connections>
+                                <action selector="back:" destination="RL7-k1-KWN" id="lag-8b-XUU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="display" destination="2BH-dE-yiI" id="stg-pX-2w8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81X-oF-BEV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221.5999999999999" y="841.52923538230891"/>
+        </scene>
+        <!--Bank Infomation-->
+        <scene sceneID="XEC-6p-OPx">
+            <objects>
+                <viewController storyboardIdentifier="TransferVC" id="cxW-Lp-CmS" customClass="TransferViewController" customModule="Poiesis_Group" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="953-ZM-Zaz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-aP-UMz">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="GfI-gF-s5G"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bank Infomation" id="oHc-hQ-ldS">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1KN-y7-Xez">
+                            <connections>
+                                <action selector="back:" destination="cxW-Lp-CmS" id="CI7-B9-m0K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="display" destination="Gsi-aP-UMz" id="ON4-Nd-hBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzo-lN-LlW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5550" y="106"/>
         </scene>
     </scenes>
 </document>
